@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Chat Application</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="login-container" id="login-container">
+      <h2>Enter Chat Room</h2>
+      <input
+        type="text"
+        id="username-input"
+        placeholder="Enter your username"
+        autocomplete="off"
+      />
+      <button id="login-button">Join</button>
+      <p id="error-message" style="color: red; display: none"></p>
+    </div>
+    <div class="container" id="chat-container" style="display: none">
+      <div class="rooms-list">
+        <h2>Chat Rooms</h2>
+        <ul id="rooms">
+          <!-- Rooms will be dynamically added here -->
+        </ul>
+        <div class="create-room">
+          <input
+            type="text"
+            id="new-room-input"
+            placeholder="Enter new room name"
+          />
+          <button id="create-room-button">Create Room</button>
+        </div>
+      </div>
+      <div class="chat-area">
+        <div class="chat-header">
+          <h2 id="room-name">Select a Room</h2>
+        </div>
+        <div class="chat-box" id="chat-box">
+          <!-- Messages will appear here -->
+        </div>
+        <div class="chat-input">
+          <input
+            type="text"
+            id="message-input"
+            placeholder="Type a message..."
+            autocomplete="off"
+          />
+          <button id="send-button">Send</button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
